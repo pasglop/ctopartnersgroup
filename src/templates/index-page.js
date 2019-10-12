@@ -8,12 +8,9 @@ import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
   image,
-  title,
   heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
+  mainpitch
 }) => (
   <div>
     <div
@@ -47,9 +44,9 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {title}
+          {heading}
         </h1>
-        <h3
+        <h2
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
@@ -61,7 +58,7 @@ export const IndexPageTemplate = ({
           }}
         >
           {subheading}
-        </h3>
+        </h2>
       </div>
     </div>
     <section className="section section--gradient" style={{ backgroundColor: 'rgb(46,163,242)' }}>
@@ -72,11 +69,13 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h3 className="title">{mainpitch.title}</h3>
                   </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
+                  <ul className="tile">
+                      {mainpitch.arguments.map( ( pitchItem, i ) => {
+                         return  <li key={i}><img src={pitchItem.iconarg} alt="" /> {pitchItem.icontext}</li>;
+                      })}
+                  </ul>
                 </div>
               </div>
             </div>
@@ -126,10 +125,6 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage = ({ data }) => {
@@ -138,13 +133,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
+        image={frontmatter.heroimg}
+        heading={frontmatter.heroheading}
+        subheading={frontmatter.herosubheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -164,34 +156,28 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
+        heroimg {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        heading
-        subheading
+        heroheading
+        herosubheading
         mainpitch {
           title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+          arguments {
+            iconarg {
+
+                childImageSharp {
+                    fluid(maxWidth: 240, quality: 64) {
+                        ...GatsbyImageSharpFluid
+                    }
                 }
-              }
             }
-            text
+            textarg
           }
-          heading
-          description
         }
       }
     }
