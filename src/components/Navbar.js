@@ -1,4 +1,5 @@
 import React from 'react';
+import VisibilitySensor from "react-visibility-sensor";
 import { Link } from 'gatsby';
 import logo from '../img/CTO_Partners_group.png';
 
@@ -8,8 +9,17 @@ const Navbar = class extends React.Component {
     this.state = {
       active: false,
       navBarActiveClass: '',
+      fixed: false
     };
   }
+
+  visibilitySensorChange = val => {
+    if (val) {
+      this.setState({ fixed: false });
+    } else {
+      this.setState({ fixed: true });
+    }
+  };
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
@@ -31,10 +41,17 @@ const Navbar = class extends React.Component {
     );
   };
 
+  getHeaderSize = () => {
+    const fixed = this.state.fixed ? "fixed" : "";
+
+    return `${fixed}`;
+  };
+
   render() {
     return (
+        <>
       <nav
-        className="navbar is-transparent"
+        className={`navbar is-transparent is-fixed-top ${this.getHeaderSize()}`}
         role="navigation"
         aria-label="main navigation"
       >
@@ -74,6 +91,10 @@ const Navbar = class extends React.Component {
           </div>
         </div>
       </nav>
+        <VisibilitySensor onChange={this.visibilitySensorChange}>
+          <div className="sensor" />
+        </VisibilitySensor>
+        </>
     )
   };
 };

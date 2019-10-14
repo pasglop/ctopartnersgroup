@@ -1,6 +1,8 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
+import Img from "gatsby-image";
 
 import Layout from '../components/Layout';
 import BlogRoll from '../components/BlogRoll';
@@ -13,7 +15,7 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <section
-      className="hero is-primary is-fullheight-with-navbar"
+      className="hero is-fullheight-with-navbar"
       style={{
         backgroundImage: `url(${
             !!heroimg.childImageSharp ? heroimg.childImageSharp.fluid.src : heroimg
@@ -21,14 +23,15 @@ export const IndexPageTemplate = ({
         backgroundPosition: `top left`,
       }}
     >
-      <div className="hero-body ">
-          <div className="container">
-              <h1 className="title">
-                  {heroheading}
-              </h1>
-              <h2 className="subtitle">
-                  {herosubheading}
-              </h2>
+      <div className="container hero-bodyr">
+          <div className="tile box is-vertical is-3" style={{ backgroundColor: 'rgba(28,28,28,0.54)', marginTop: '15%',  marginLeft: '75%' }}>
+                  <h1 className="title has-text-white is-size-2 is-spaced">
+                      {heroheading}
+                  </h1>
+                  <h2 className="subtitle has-text-white is-size-4 has-text-weight-light">
+                      {herosubheading}
+                      <Link to="/contact" className="hero-buttons button has-text-white is-primary is-medium" >Déposez votre dossier</Link>
+                  </h2>
           </div>
       </div>
     </section>
@@ -37,18 +40,27 @@ export const IndexPageTemplate = ({
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h3 className="title">{mainpitch.title}</h3>
-                  </div>
-                  <ul className="tile">
-                      {mainpitch.arguments.map( ( pitchItem, i ) => {
-                         return  <li key={i}><img src={pitchItem.iconarg} alt="" /> {pitchItem.icontext}</li>;
-                      })}
-                  </ul>
-                </div>
-              </div>
+                <ul class="tile">
+                {mainpitch.arguments.map( ( pitchItem, i ) => {
+                    return  <li key={i} className="tile">
+                        <div className="card">
+                            <div className="card-content">
+                                <div className="media">
+                                    <div className="media-left">
+                                        <picture className="image is-64x64 has-text-white">
+                                            <Img className="" fixed={pitchItem.iconarg.childImageSharp.fixed} alt=""  />
+                                        </picture>
+                                    </div>
+                                    <div className="media-content">
+                                        <p className="title is-4"><ReactMarkdown source={pitchItem.textarg} /></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>;
+                })}
+                </ul>
             </div>
           </div>
         </div>
@@ -58,11 +70,16 @@ export const IndexPageTemplate = ({
       <div className="container" >
         <div className="section">
       <div className="columns">
-        <div className="column is-12 has-text-centered">
+        <div className="column is-6 has-text-centered">
           <Link className="btn" to="/offer">
             L'offre CTO Partners Group
           </Link>
         </div>
+          <div className="column is-6 has-text-centered">
+              <Link className="btn" to="/offer">
+                  Devenir Partner
+              </Link>
+          </div>
       </div>
       <div className="column is-12">
         <h3 className="has-text-weight-semibold is-size-2">
@@ -132,8 +149,8 @@ export const pageQuery = graphql`
           arguments {
             iconarg {
                 childImageSharp {
-                    fluid(maxWidth: 240, quality: 64) {
-                        ...GatsbyImageSharpFluid
+                    fixed(width: 64, quality: 100) {
+                        ...GatsbyImageSharpFixed
                     }
                 }
             }
