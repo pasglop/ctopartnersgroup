@@ -159,7 +159,7 @@ OfferPage.propTypes = {
 export default OfferPage;
 
 export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+  query OfferPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

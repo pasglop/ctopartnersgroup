@@ -3,21 +3,20 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
-  image,
-  heading,
-  subheading,
+  heroimg,
+  heroheading,
+  herosubheading,
   mainpitch
 }) => (
-  <div>
+  <div>hero:{heroimg}
     <div
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            !!heroimg && !!heroimg.childImageSharp ? heroimg.childImageSharp.fluid.src : heroimg
         })`,
         backgroundPosition: `top left`,
         backgroundAttachment: `fixed`,
@@ -44,7 +43,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {heading}
+          {heroheading}
         </h1>
         <h2
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
@@ -57,7 +56,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {subheading}
+          {herosubheading}
         </h2>
       </div>
     </div>
@@ -87,15 +86,6 @@ export const IndexPageTemplate = ({
       <div className="container" >
         <div className="section">
       <div className="columns">
-        <div className="column is-12">
-          <h3 className="has-text-weight-semibold is-size-2">
-            {heading}
-          </h3>
-          <p>{description}</p>
-        </div>
-      </div>
-      <Features gridItems={intro.blurbs} />
-      <div className="columns">
         <div className="column is-12 has-text-centered">
           <Link className="btn" to="/offer">
             L'offre CTO Partners Group
@@ -120,10 +110,10 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    heroimg: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
+  heroheading: PropTypes.string,
+  herosubheading: PropTypes.string,
   mainpitch: PropTypes.object,
 };
 
@@ -169,7 +159,6 @@ export const pageQuery = graphql`
           title
           arguments {
             iconarg {
-
                 childImageSharp {
                     fluid(maxWidth: 240, quality: 64) {
                         ...GatsbyImageSharpFluid
