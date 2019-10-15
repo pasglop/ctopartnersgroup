@@ -20,7 +20,8 @@ export const PartnerPageTemplate = ({ title, partners, content, contentComponent
               </h2>
               <PageContent className="content" content={content} />
               {partners.map( ( pItem, i ) => {
-                return  <div className="tile is-ancestor">
+                return  (
+                    <div className="tile is-ancestor">
                       <div className="tile is-parent">
                         <div className="tile is-child card">
                           <div className="card-content">
@@ -40,7 +41,8 @@ export const PartnerPageTemplate = ({ title, partners, content, contentComponent
                           </div>
                         </div>
                       </div>
-                    </div>;
+                    </div>
+                );
               })}
             </div>
           </div>
