@@ -39,7 +39,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partners-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "PartnerList", name: "partnerlist", widget: object, fields: [{label: Photo, name: photo, widget: image}, {label: partnerJob, name: partnerjob, widget: text}, {label: partnerName, name: partnername, widget: text}, {label: partnerResume, name: partnerresume, widget: "markdown"}]}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "PartnerList", name: "partnerlist", widget: list, fields: [{label: Photo, name: photo, widget: image}, {label: partnerJob, name: partnerjob, widget: text}, {label: partnerName, name: partnername, widget: text}, {label: partnerResume, name: partnerresume, widget: "markdown"}]}
       - file: "src/pages/offer/index.md"
         label: "Offer Page"
         name: "offer"
