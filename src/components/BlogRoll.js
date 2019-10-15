@@ -31,7 +31,7 @@ class BlogRoll extends React.Component {
                   ) : null}
                   <p className="post-meta">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title has-text-primary is-size-4 has-text-white"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
@@ -46,8 +46,8 @@ class BlogRoll extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                  <Link className="button is-pulled-right is-clearfix" to={post.fields.slug}>
+                    Continuer à lire →
                   </Link>
                 </p>
               </article>
