@@ -3,14 +3,15 @@ templateKey: offer-page
 title: L’OFFRE CTO Partners
 image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
 intro:
-  blurbs:
-    - image: /img/placeholder.png
+  offers:
+    - heading: > 
+        Une équipe métier & business
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        À laquelle il manque une caution technologique pour crédibiliser le projet et lever des fonds.
+    - heading: > 
+        Une Equipe complète
+      text: > 
+        Avec un besoin d’accompagnement de l’équipe technique. Ex. Montée en charge significative des infrastructures.        
   description: >-
     CTO Partners propose un accompagnement de minimum 12 mois pour faire éclore
     votre projet techniquement et le structurer pour les phases suivantes de

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
-import Pricing from '../components/Pricing';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export const OfferPageTemplate = ({
@@ -15,8 +14,7 @@ export const OfferPageTemplate = ({
   intro,
   main,
   testimonials,
-  fullImage,
-  pricing,
+  fullImage
 }) => (
   <div className="content">
     <div
@@ -91,11 +89,6 @@ export const OfferPageTemplate = ({
                   })`,
                 }}
               />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
             </div>
           </div>
         </div>
@@ -110,7 +103,7 @@ OfferPageTemplate.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+    offers: PropTypes.array,
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
@@ -121,11 +114,7 @@ OfferPageTemplate.propTypes = {
   }),
   testimonials: PropTypes.array,
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+
 };
 
 const OfferPage = ({ data }) => {
@@ -142,7 +131,6 @@ const OfferPage = ({ data }) => {
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
       />
     </Layout>
   )
@@ -173,14 +161,8 @@ export const productPageQuery = graphql`
         heading
         description
         intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+          offers {
+            heading
             text
           }
           heading
@@ -193,7 +175,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 80, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -203,7 +185,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
+                fluid(maxWidth: 80, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -213,7 +195,7 @@ export const productPageQuery = graphql`
             alt
             image {
               childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
+                fluid(maxWidth: 80, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -231,16 +213,7 @@ export const productPageQuery = graphql`
             }
           }
         }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
+
       }
     }
   }

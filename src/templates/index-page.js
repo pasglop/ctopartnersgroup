@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 
 import Layout from '../components/Layout';
 import BlogRoll from '../components/BlogRoll';
@@ -14,17 +15,14 @@ export const IndexPageTemplate = ({
   mainpitch
 }) => (
   <div>
-    <section
-      className="hero is-fullheight-with-navbar"
-      style={{
-        backgroundImage: `url(${
-            !!heroimg.childImageSharp ? heroimg.childImageSharp.fluid.src : heroimg
-        })`,
-        backgroundPosition: `top left`,
-      }}
-    >
+      <BackgroundImage
+          Tag="section"
+          className="hero is-fullheight-with-navbar"
+          fluid={heroimg.childImageSharp.fluid}
+          backgroundColor={`#2ea3f2`}
+      >
       <div className="container hero-body">
-          <div className="tile box is-vertical is-3" style={{ backgroundColor: 'rgba(28,28,28,0.54)', marginTop: '15%',  marginLeft: '75%' }}>
+          <div className="tile box is-vertical is-3" style={{ backgroundColor: 'rgba(28,28,28,0.54)' }}>
                   <h1 className="title has-text-white is-size-2 is-spaced">
                       {heroheading}
                   </h1>
@@ -34,7 +32,7 @@ export const IndexPageTemplate = ({
                   </h2>
           </div>
       </div>
-    </section>
+    </BackgroundImage>
     <section className="section section-gradient" style={{ backgroundColor: 'rgb(46,163,242)' }}>
       <div className="container" >
         <div className="section">
