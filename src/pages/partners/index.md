@@ -1,7 +1,7 @@
 ---
 templateKey: partners-page
 title: Les associés
-partners:
+partnerlist:
   - photo: /img/c.moulin-1.jpg
     partnername: Clément Moulin
     partnerjob: Fondateur chez SimpleRezo

@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content';
 import Img from "gatsby-image";
 import ReactMarkdown from "react-markdown";
 
-export const AboutPageTemplate = ({ title, content, partners, contentComponent }) => {
+export const PartnerPageTemplate = ({ title, partners, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -50,7 +50,7 @@ export const AboutPageTemplate = ({ title, content, partners, contentComponent }
   )
 };
 
-AboutPageTemplate.propTypes = {
+PartnerPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   partners: PropTypes.object,
   content: PropTypes.string,
@@ -62,11 +62,11 @@ const PartnersPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
+      <PartnerPageTemplate
         title={post.frontmatter.title}
-        partners={post.frontmatter.partners}
+        partners={post.frontmatter.partnerlist}
         content={post.html}
+        contentComponent={HTMLContent}
       />
     </Layout>
   )
@@ -78,13 +78,13 @@ PartnersPage.propTypes = {
 
 export default PartnersPage;
 
-export const aboutPageQuery = graphql`
+export const PartnerPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title,
-        partners {
+        partnerlist {
           photo {
             childImageSharp {
               fixed(width: 100, quality: 100) {
