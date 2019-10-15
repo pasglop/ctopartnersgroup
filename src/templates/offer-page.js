@@ -43,7 +43,6 @@ export const OfferPageTemplate = ({
           <div className="columns">
             <div className="column is-7 is-offset-1">
               <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
             </div>
           </div>
           <div className="columns">
@@ -101,7 +100,6 @@ OfferPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     offers: PropTypes.array,
   }),
@@ -126,7 +124,6 @@ const OfferPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        description={frontmatter.description}
         intro={frontmatter.intro}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
@@ -151,6 +148,7 @@ export const productPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        heading
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -158,8 +156,6 @@ export const productPageQuery = graphql`
             }
           }
         }
-        heading
-        description
         intro {
           offers {
             heading
@@ -168,31 +164,19 @@ export const productPageQuery = graphql`
           heading
           description
         }
+        full_image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         main {
           heading
           description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 80, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 80, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
+          bizcases {
+            heading
+            description            
             image {
               childImageSharp {
                 fluid(maxWidth: 80, quality: 92) {
@@ -206,13 +190,7 @@ export const productPageQuery = graphql`
           author
           quote
         }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+
 
       }
     }

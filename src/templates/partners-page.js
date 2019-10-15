@@ -37,7 +37,7 @@ export const PartnerPageTemplate = ({ title, partners, content, contentComponent
                               </div>
                             </div>
 
-                            <div className="content">{pItem.partnerresume}</div>
+                            <div className="content"><ReactMarkdown source={pItem.partnerresume} /></div>
                           </div>
                         </div>
                       </div>

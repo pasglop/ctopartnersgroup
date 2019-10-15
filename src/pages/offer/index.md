@@ -2,6 +2,8 @@
 templateKey: offer-page
 title: L’OFFRE CTO Partners
 image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
+heading: >
+    L’OFFRE CTO Partners
 intro:
   offers:
     - heading: > 
@@ -31,15 +33,10 @@ main:
     possibilité de faire appel à l'ensemble des Partners pour trouver des
     solutions (recommandation technique, aide au recrutement, etc.).
   heading: Notre Accompagnement
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/placeholder.png
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/placeholder.png
-  image3:
-    alt: Coffee beans
-    image: /img/placeholder.png
+  bizcases:
+    - image: /img/placeholder.png
+      heading
+      description
 testimonials:
   - author: Vidmizer
     quote: >-
