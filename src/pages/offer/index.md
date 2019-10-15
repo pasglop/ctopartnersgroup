@@ -1,8 +1,7 @@
 ---
-templateKey: 'offer-page'
-path: /offer
-title: Our Coffee
-image: /img/placeholder.png
+templateKey: offer-page
+title: L’OFFRE CTO Partners
+image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
 heading: Great coffee with a conscience
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
@@ -25,12 +24,14 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 main:
-  heading: Great coffee with no compromises
+  heading: Notre Accompagnement
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    Nous apportons différentes compétences pour vous accompagner au plus près de
+    vos problématiques. Les Parrains qui ont choisis de vous suivre assurent une
+    interaction hebdomadaire dans la phase d'accompagnement actif. Si une
+    problématique technique est hors de compétences des Parrains, ils ont la
+    possibilité de faire appel à l'ensemble des Partners pour trouver des
+    solutions (recommandation technique, aide au recrutement, etc.).
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/placeholder.png
@@ -41,15 +42,11 @@ main:
     alt: Coffee beans
     image: /img/placeholder.png
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: Vidmizer
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
-full_image: /img/placeholder.png
+      CTO Partners a été un vrai accélérateur pour pouvoir choisir et mettre en
+      place la solution
+full_image: /img/cto_invest.png
 pricing:
   heading: Monthly subscriptions
   description: >-
@@ -79,3 +76,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+
