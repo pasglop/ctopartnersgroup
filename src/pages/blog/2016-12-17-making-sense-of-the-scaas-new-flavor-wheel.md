@@ -10,7 +10,9 @@ featuredpost: true
 featuredimage: /img/meetup-ctopartner-scaleway.png
 tags:
   - events
+  - meetup
+  - pitch
 ---
-![Rdv le 17/10/2019]()
+![Rdv le 17/10/2019](/img/meetup-ctopartner-scaleway.png "Meetup chez ScaleWay")
 
 Détails sur l'évènelment
