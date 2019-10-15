@@ -12,5 +12,5 @@ CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate('index', IndexPagePreview);
 CMS.registerPreviewTemplate('about', PartnersPagePreview);
-CMS.registerPreviewTemplate('products', OfferPagePreview);
+CMS.registerPreviewTemplate('offer', OfferPagePreview);
 CMS.registerPreviewTemplate('blog', BlogPostPreview);

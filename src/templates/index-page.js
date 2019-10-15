@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import BlogRoll from '../components/BlogRoll';
@@ -103,7 +103,6 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
     heroimg: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
   heroheading: PropTypes.string,
   herosubheading: PropTypes.string,
   mainpitch: PropTypes.object,

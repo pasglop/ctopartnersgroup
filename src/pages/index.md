@@ -13,6 +13,6 @@ mainpitch:
       textarg: "**Ses souscripteurs sont des managers techniques ayant contribué aux plus grands succès du digital français.**\r\n\n(BlaBlaCar, Critéo, Le Bon Coin, Rentabiliweb, Free, Meetic ‎….)."
     - iconarg: /img/icons/diploma.png
       textarg: "**La plupart sont issus des meilleures formations**\r\n\n(Epita, Epitech, Efrei, Executive MBA Epitech… )"
-  title: Why Kaldi
+  title: Qui sont les Partners ?
 ---
 
