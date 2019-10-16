@@ -17,21 +17,27 @@ export const OfferPageTemplate = ({
   fullImage
 }) => (
   <div className="content">
-    <BackgroundImage Tag="div"
-                     className="full-width-image-container margin-top-0"
+    <BackgroundImage Tag="section"
+                     className="hero is-large"
                      fluid={image.childImageSharp.fluid}
-                     backgroundColor={`#2ea3f2`}>
-      <h2
-          className="has-text-weight-bold is-size-1"
-          style={{
-            boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-            backgroundColor: '#f40',
-            color: 'white',
-            padding: '1rem',
-          }}
-      >
-        {title}
-      </h2>
+                     backgroundColor={`#2ea3f2`}
+    >
+      <div className="hero-body">
+        <div className="container tile">
+          <h2
+              className="tile-item is-vertical has-text-weight-bold is-size-1"
+              style={{
+                backgroundColor: 'rgba(28,28,28,0.54)',
+                color: 'white',
+                padding: '1rem',
+              }}
+          >
+            {title}
+          </h2>
+        </div>
+      </div>
+
+    </BackgroundImage>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -51,6 +57,9 @@ export const OfferPageTemplate = ({
                     <p>{main.description}</p>
                   </div>
                 </div>
+                <div className="column is-5">
+                  <GatsbyImage fluid={fullImage.childImageSharp.fluid} />
+                </div>
                 <div className="tile is-ancestor">
                   <div className="tile is-vertical">
                     <div className="tile">
@@ -58,7 +67,11 @@ export const OfferPageTemplate = ({
                             return (
                                 <div className="tile is-parent is-vertical">
                                   <article className="tile is-child">
-                                    <GatsbyImage fluid={bizcase.image.childImageSharp.fluid} />
+                                    <div className="is-2">
+                                      <GatsbyImage fixed={bizcase.image.childImageSharp.fixed} />
+                                    </div>
+                                    <h5>{bizcase.heading}</h5>
+                                    <p>{bizcase.description}</p>
                                   </article>
                                 </div>
                             );
@@ -68,22 +81,11 @@ export const OfferPageTemplate = ({
                   </div>
                 </div>
                 <Testimonials testimonials={testimonials} />
-                <div
-                    className="full-width-image-container"
-                    style={{
-                      backgroundImage: `url(${
-                          fullImage.childImageSharp
-                              ? fullImage.childImageSharp.fluid.src
-                              : fullImage
-                      })`,
-                    }}
-                />
               </div>
             </div>
           </div>
         </div>
       </section>
-    </BackgroundImage>
   </div>
 );
 
@@ -172,8 +174,8 @@ export const productPageQuery = graphql`
             description
             image {
               childImageSharp {
-                fluid(maxWidth: 80, quality: 92) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 80, quality: 92) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }

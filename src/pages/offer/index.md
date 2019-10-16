@@ -39,18 +39,18 @@ full_image: /img/cto_invest.png
 main:
   bizcases:
     - heading: Une équipe métier & business
-      image: /img/safari-pinned-tab.svg
-      undefined: >-
+      image: /img/artificial-intelligence.png
+      description: >
         À laquelle il manque une caution technologique pour crédibiliser le
         projet et lever des fonds
     - heading: Une Equipe complète
-      image: /img/safari-pinned-tab.svg
-      undefined: >-
+      image: /img/infrastructure.png
+      description: >
         Avec un besoin d’accompagnement de l’équipe technique. Ex. Monté en
         charge significative des infrastructures
     - heading: La nécessité d’accompagnement
-      image: /img/safari-pinned-tab.svg
-      undefined: Dans l’architecture technique internationale
+      image: /img/global.png
+      description: Dans l’architecture technique internationale
   description: >
     Nous apportons différentes compétences pour vous accompagner au plus près de
     vos problématiques. Les Parrains qui ont choisis de vous suivre assurent une
