@@ -43,7 +43,7 @@ export const OfferPageTemplate = ({
           <div className="section">
             <div className="columns">
               <div className="column is-7 is-offset-1">
-                <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+                <h3 className="has-text-weight-semibold is-size-2">{intro.heading}</h3>
               </div>
             </div>
             <div className="columns">
@@ -161,7 +161,7 @@ export const productPageQuery = graphql`
         }
         full_image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 500, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'CTO Partners Group - CTO4Equity',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'CTO Partners Group est un fond d\'investissement de CTO et manager techniques qui accompagne les Start-Ups early-stage de l\'idée jusqu\'à la serie A.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
-        develop: true, // Activates purging in npm run develop
+        develop: false, // Activates purging in npm run develop
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
