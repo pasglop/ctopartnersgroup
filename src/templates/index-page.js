@@ -21,15 +21,19 @@ export const IndexPageTemplate = ({
           fluid={heroimg.childImageSharp.fluid}
           backgroundColor={`#2ea3f2`}
       >
-      <div className="container hero-body">
-          <div className="tile box is-vertical is-3" style={{ backgroundColor: 'rgba(28,28,28,0.54)' }}>
-                  <h1 className="title has-text-white is-size-2 is-spaced">
+      <div className="hero-body container">
+          <div className="level">
+              <div className="level-right">
+          <div className="level-item tile box is-vertical is-4" style={{ backgroundColor: 'rgba(28,28,28,0.54)' }}>
+                  <h1 className=" has-text-white is-size-2 is-spaced">
                       {heroheading}
                   </h1>
                   <h2 className="subtitle has-text-white is-size-4 has-text-weight-light">
                       {herosubheading}
                       <Link to="/contact" className="hero-buttons button has-text-white is-primary is-medium" >Déposez votre dossier</Link>
                   </h2>
+          </div>
+              </div>
           </div>
       </div>
     </BackgroundImage>

@@ -51,14 +51,14 @@ const Navbar = class extends React.Component {
     return (
         <>
       <nav
-        className={`navbar is-transparent is-fixed-top ${this.getHeaderSize()}`}
+        className="navbar is-transparent is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="CTO Partners Group"  />
+              <img src={logo} alt="CTO Partners Group"  className={`logo ${this.getHeaderSize()}`} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -76,11 +76,14 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
+              <Link className="navbar-item" to="/offer">
+                L'offre
+              </Link>
               <Link className="navbar-item" to="/partners">
-                Partners
+                Les Partners
               </Link>
               <Link className="navbar-item" to="/blog">
-                 News
+                 Actus
               </Link>
               <Link className="navbar-item" to="/contact">
                 Contact

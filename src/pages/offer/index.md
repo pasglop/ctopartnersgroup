@@ -2,8 +2,7 @@
 templateKey: offer-page
 title: L’OFFRE CTO Partners
 image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
-heading: >
-    L’OFFRE CTO Partners
+heading: L’OFFRE CTO Partners
 intro:
   offers:
     - heading: > 
@@ -35,8 +34,9 @@ main:
   heading: Notre Accompagnement
   bizcases:
     - image: /img/placeholder.png
-      heading
-      description
+      heading: Une équipe métier & business
+      description: >
+        À laquelle il manque une caution technologique pour crédibiliser le projet et lever des fonds
 testimonials:
   - author: Vidmizer
     quote: >-

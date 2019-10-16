@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo #git-gateway
   branch: master
 
 media_folder: static/img
@@ -49,7 +49,14 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Offers, name: offers, widget: list, fields: [{label: Heading, name: heading, widget: text}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields:
+            [
+          {label: Heading, name: heading, widget: string},
+          {label: Description, name: description, widget: text},
+          {label: Offers, name: offers, widget: list, fields:
+            [
+            {label: Heading, name: heading, widget: text},
+            {label: Text, name: text, widget: text}]}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Main, name: main, widget: object, fields:
             [

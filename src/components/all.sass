@@ -12,6 +12,16 @@ $primary: $ctop-blue
 $primary-invert: $ctop-blue-invert
 $card-background-color: transparent
 
+.sensor
+  display: block
+  position: absolute
+  bottom: 0
+  z-index: 1
+  left: 0
+  right: 0
+  height: 1px
+  top: 100px
+
 .title
   font-weight: 500 !important
 
@@ -127,6 +137,10 @@ $menu-label-color: $white-ter
   flex-basis: 35%
   margin: 0 1.5em 0 0
 
+.logo
+  transition: max-height 0.4s linear
+  &.fixed
+    max-height: 40px !important
 
 @import "~bulma"
 
@@ -142,3 +156,4 @@ $menu-label-color: $white-ter
     text-align: center
     max-width: 70%
     margin: 0 0 1em
+
