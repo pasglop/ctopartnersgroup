@@ -1,7 +1,7 @@
 ---
 templateKey: offer-page
 title: L’OFFRE CTO Partners
-heading: L’OFFRE CTO Partners
+heading: L’OFFRE CTO Partners Group
 image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
 intro:
   description: >-
