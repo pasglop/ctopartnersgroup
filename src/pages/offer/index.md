@@ -35,7 +35,7 @@ intro:
       text: >-
         CTO Partners peut apporter un financement sur les projets qu’il
         accompagne.
-full_image: /img/cto_invest.png
+full_image: /img/fond-1024x444.png
 main:
   bizcases:
     - description: >
