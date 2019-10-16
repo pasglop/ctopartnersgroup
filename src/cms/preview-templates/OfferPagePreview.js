@@ -9,8 +9,13 @@ const OfferPagePreview = ({ entry, getAsset }) => {
   const entryTestimonials = entry.getIn(['data', 'testimonials']);
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
-  const entryBizCases = entry.getIn(['data', 'bizcases']);
-  const bizcases = entryBizCases ? entryBizCases.toJS() : [];
+  const entryBizCases = entry.getIn(['data', 'main', 'bizcases']);
+  let bizcases = entryBizCases ? entryBizCases.toJS() : [];
+
+  bizcases = bizcases.map(cases => {
+      cases.image = getAsset(cases.image);
+      return cases;
+  });
 
   return (
     <OfferPageTemplate

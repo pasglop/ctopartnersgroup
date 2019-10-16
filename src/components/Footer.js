@@ -7,9 +7,9 @@ import twitter from '../img/social/twitter.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
+      <footer className="footer has-text-white-ter">
+        <div className="content has-text-centered  has-text-white-ter">
+          <div className="container has-text-white-ter">
             <div className="columns">
               <div className="column is-4">
                 <section className="menu">
@@ -20,29 +20,14 @@ const Footer = class extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/about">
-                        About
+                      <Link className="navbar-item" to="/offer">
+                        Notre Offre
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
+                      <Link className="navbar-item" to="/contact/startup">
+                        Déposer un dossier
                       </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
                     </li>
                   </ul>
                 </section>
@@ -52,12 +37,17 @@ const Footer = class extends React.Component {
                   <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/blog">
-                        Latest Stories
+                        Actualités
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/partners">
+                        Les partners
                       </Link>
                     </li>
                     <li>
                       <Link className="navbar-item" to="/contact">
-                        Contact
+                        Nous rejoindre
                       </Link>
                     </li>
                   </ul>
