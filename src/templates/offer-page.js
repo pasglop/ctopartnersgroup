@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import GatsbyImage from "gatsby-image";
 import BackgroundImage from 'gatsby-background-image';
 
