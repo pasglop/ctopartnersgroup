@@ -1,18 +1,9 @@
 ---
 templateKey: offer-page
 title: L’OFFRE CTO Partners
-image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
 heading: L’OFFRE CTO Partners
+image: /img/austin-distel-mpN7xjKQ_Ns-unsplash.jpg
 intro:
-  offers:
-    - heading: > 
-        Une équipe métier & business
-      text: >
-        À laquelle il manque une caution technologique pour crédibiliser le projet et lever des fonds.
-    - heading: > 
-        Une Equipe complète
-      text: > 
-        Avec un besoin d’accompagnement de l’équipe technique. Ex. Montée en charge significative des infrastructures.        
   description: >-
     CTO Partners propose un accompagnement de minimum 12 mois pour faire éclore
     votre projet techniquement et le structurer pour les phases suivantes de
@@ -22,8 +13,44 @@ intro:
     apportent une caution technique à votre projet auprès d'autres
     investisseurs.
   heading: L'offre CTO Partners - CTO4Equity
+  offers:
+    - heading: |
+        Accélérateur Technique
+      text: >-
+        Passer d’une idée à un produit nécessite un investissement technique
+        important. Afin d’accompagner la start-up sur le marché CTO Partners
+        participe à la préparation du MVP : un Tech manager spécialisé dans
+        votre domaine prépare le plan de développement et encadre un développeur
+        focusé sur un objectif : votre MVP en 6 mois.
+    - heading: Accompagnement technologique
+      text: >-
+        Un Parrain CTO vous conseille dans vos choix technologique et dans la
+        stratégie IT à mettre en place. Il vous permet d’adresser toutes les
+        problématiques technologiques. Il structure le service IT de demain
+    - heading: Un réseau
+      text: >-
+        En devenant une start-up du réseau CTO Partners vous avez accès au plus
+        grand réseau de manager IT français.
+    - heading: Financement
+      text: >-
+        CTO Partners peut apporter un financement sur les projets qu’il
+        accompagne.
 full_image: /img/cto_invest.png
 main:
+  bizcases:
+    - heading: Une équipe métier & business
+      image: /img/safari-pinned-tab.svg
+      undefined: >-
+        À laquelle il manque une caution technologique pour crédibiliser le
+        projet et lever des fonds
+    - heading: Une Equipe complète
+      image: /img/safari-pinned-tab.svg
+      undefined: >-
+        Avec un besoin d’accompagnement de l’équipe technique. Ex. Monté en
+        charge significative des infrastructures
+    - heading: La nécessité d’accompagnement
+      image: /img/safari-pinned-tab.svg
+      undefined: Dans l’architecture technique internationale
   description: >
     Nous apportons différentes compétences pour vous accompagner au plus près de
     vos problématiques. Les Parrains qui ont choisis de vous suivre assurent une
@@ -32,11 +59,6 @@ main:
     possibilité de faire appel à l'ensemble des Partners pour trouver des
     solutions (recommandation technique, aide au recrutement, etc.).
   heading: Notre Accompagnement
-  bizcases:
-    - image: /img/placeholder.png
-      heading: Une équipe métier & business
-      description: >
-        À laquelle il manque une caution technologique pour crédibiliser le projet et lever des fonds
 testimonials:
   - author: Vidmizer
     quote: >-
