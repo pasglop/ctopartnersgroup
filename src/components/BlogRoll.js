@@ -34,21 +34,19 @@ class BlogRoll extends React.Component {
                       className="title has-text-primary is-size-4 has-text-white"
                       to={post.fields.slug}
                     >
-                      {post.frontmatter.title}
+                      <h2 className="has-text-white">{post.frontmatter.title}</h2>
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="subtitle is-size-6 is-block">
                       {post.frontmatter.date}
                     </span>
                   </p>
                 </header>
                 <p>
                   {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-pulled-right is-clearfix" to={post.fields.slug}>
+                  <Link className="btn is-link has-text-dark is-pulled-right is-clearfix" to={post.fields.slug}>
                     Continuer à lire →
                   </Link>
+                  <br />
                 </p>
               </article>
             </div>

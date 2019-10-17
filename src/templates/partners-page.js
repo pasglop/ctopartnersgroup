@@ -32,12 +32,11 @@ export const PartnerPageTemplate = ({ title, partners, content, contentComponent
                                 </figure>
                               </div>
                               <div className="media-content">
-                                <p className="title is-4">{pItem.partnername}</p>
-                                <p className="title is-4">{pItem.partnerjob}</p>
+                                <h2 className="title is-4">{pItem.partnername}</h2>
+                                <h3 className="subtitle is-4 is-size-5">{pItem.partnerjob}</h3>
                               </div>
                             </div>
-
-                            <div className="content"><ReactMarkdown source={pItem.partnerresume} /></div>
+                            {/* <div className="content"><ReactMarkdown source={pItem.partnerresume} /></div>*/}
                           </div>
                         </div>
                       </div>

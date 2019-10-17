@@ -24,7 +24,7 @@ export const OfferPageTemplate = ({
     >
       <div className="hero-body">
         <div className="container tile">
-          <h2
+          <h1
               className="tile-item is-vertical has-text-weight-bold is-size-1"
               style={{
                 backgroundColor: 'rgba(28,28,28,0.54)',
@@ -33,7 +33,7 @@ export const OfferPageTemplate = ({
               }}
           >
             {title}
-          </h2>
+          </h1>
         </div>
       </div>
 
@@ -56,9 +56,9 @@ export const OfferPageTemplate = ({
                     </h3>
                     <p>{main.description}</p>
                   </div>
-                </div>
-                <div className="column is-5">
-                  <GatsbyImage fluid={fullImage.childImageSharp.fluid} />
+                  <div className="column is-5">
+                    <GatsbyImage fluid={fullImage.childImageSharp.fluid} />
+                  </div>
                 </div>
                 <div className="tile is-ancestor">
                   <div className="tile is-vertical">
@@ -80,7 +80,7 @@ export const OfferPageTemplate = ({
                     </div>
                   </div>
                 </div>
-                <Testimonials testimonials={testimonials} />
+                {/* <Testimonials testimonials={testimonials} /> */}
               </div>
             </div>
           </div>
