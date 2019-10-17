@@ -12,7 +12,7 @@ function encode(data) {
   return formData
 }
 
-export default class Contact extends React.Component {
+export default class Startup extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}

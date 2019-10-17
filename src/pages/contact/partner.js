@@ -8,7 +8,7 @@ function encode(data) {
     .join('&')
 }
 
-export default class Index extends React.Component {
+export default class Partner extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
